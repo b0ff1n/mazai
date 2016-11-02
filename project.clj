@@ -12,7 +12,6 @@
                  [ring-middleware-format     "0.7.0"]
                  [compojure                  "1.4.0"]
                  [clj-jwt                    "0.1.1"]
-                 [clj-utils                  "0.1.2"]
                  [org.clojure/test.check     "0.9.0"]]
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
@@ -22,8 +21,7 @@
   :uberjar-name "mazai-standalone.jar"
   :repl-options {:init-ns user}
   :profiles {:uberjar {:aot :all
-                       :omit-source true
-}
+                       :omit-source true}
              :dev {:dependencies [[org.clojure/tools.namespace "0.2.10"]
                                   [org.clojure/tools.nrepl     "0.2.12"]]
                    :source-paths ["dev"]
