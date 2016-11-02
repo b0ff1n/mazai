@@ -6,7 +6,8 @@
             [mazai.system         :refer [new-system]]))
 
 (def dev-config
-  {:web-server {:listening-port 8080}})
+  {:web-server {:listening-port 8080}
+   :rabbit {:uri "amqp://guest:guest@localhost:5672"}})
 
 (def system nil)
 

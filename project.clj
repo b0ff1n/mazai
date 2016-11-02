@@ -12,7 +12,8 @@
                  [ring-middleware-format     "0.7.0"]
                  [compojure                  "1.4.0"]
                  [clj-jwt                    "0.1.1"]
-                 [org.clojure/test.check     "0.9.0"]]
+                 [org.clojure/test.check     "0.9.0"]
+                 [com.novemberain/langohr    "3.6.1"]]
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
   :main ^:skip-aot mazai.core
