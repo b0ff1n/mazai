@@ -1,0 +1,8 @@
+after :validate => [:fork, :pull, :test]
+before :tarball do
+  Utils::sh "lein uberjar && cp target/uberjar/mazai-standalone.jar ./"
+end
+after :tarball do
+  Utils::sh "rm ./mazai-standalone.jar"
+end
+before :upload => [:commit, :tag]

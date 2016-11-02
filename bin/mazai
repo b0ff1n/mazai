@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+S_JAVA="java"
+S_LIB="."
+S_JAR="$S_LIB/mazai-standalone.jar"
+CONFIG_FILE="./etc/mazai.edn"
+S_ARGS="$CONFIG_FILE"
+S_CMD="$S_JAVA -server -Djava.awt.headless=true -jar $S_JAR $S_ARGS"
+echo $S_CMD
+cd `dirname $0`/.. && exec $S_CMD

@@ -1,0 +1,15 @@
+/target
+/classes
+/checkouts
+*.jar
+pom.xml
+pom.xml.asc
+*.class
+/.lein-*
+/.nrepl-port
+/resources/public/js
+/resources/public/components
+/.repl/
+/out/
+/mazai_build/
+/log/*.log
