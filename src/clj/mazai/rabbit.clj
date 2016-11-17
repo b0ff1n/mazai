@@ -40,7 +40,7 @@
                                (callback (parse-string (decode-bytes payload) true)))
                  q (lq/declare ch queue)]
              (lq/bind ch queue exchange {:routing-key route})
-             (lb/consume ch queue (lc/create-default ch {:handle-delivery-fn delivery-fn})))))
+             (lb/consume ch queue (lc/create-default ch {:handle-delivery-fn delivery-fn}) {:auto-ack true}))))
 
 
 ;; =============================================================================
