@@ -38,9 +38,10 @@
   (consume [{ch :ch} queue exchange route callback]
            (let [delivery-fn (fn [ch metadata ^bytes payload]
                                (callback (parse-string (decode-bytes payload) true)))
+                 consumer (lc/create-default ch {:handle-delivery-fn delivery-fn})
                  q (lq/declare ch queue)]
              (lq/bind ch queue exchange {:routing-key route})
-             (lb/consume ch queue (lc/create-default ch {:handle-delivery-fn delivery-fn})))))
+             (lb/consume ch queue consumer))))
 
 
 ;; =============================================================================

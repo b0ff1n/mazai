@@ -28,3 +28,8 @@
 (defn reset []
   (stop)
   (refresh :after 'user/go))
+
+
+;; (reset)
+
+;; (mazai.rabbit/consume (:rabbit system) "eugene-test" "twitter" "raw-tweets.tweets-es" (fn [m]))
