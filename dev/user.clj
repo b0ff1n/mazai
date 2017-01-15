@@ -3,6 +3,7 @@
             [clojure.repl                 :refer [doc find-doc source]]
             [clojure.pprint               :refer [pprint]]
             [clojure.tools.namespace.repl :refer [refresh]]
+            [mazai.rabbit :as r]
             [mazai.system         :refer [new-system]]))
 
 (def dev-config
